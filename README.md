@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [github](___)
-- Live Site URL: [preview](___)
+- Solution URL: [github](https://github.com/MIU-cz/fem-interactive-rating-component-main)
+- Live Site URL: [preview](https://miu-cz.github.io/fem-interactive-rating-component-main/)
 
 ## My process
 
