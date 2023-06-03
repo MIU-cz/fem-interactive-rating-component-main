@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 @import url(../resourse/normaliz-style.css);
 @import url(../resourse/fem-footer-style.css);
+:root {
+  font-family: "Overpass";
+  letter-spacing: 1px;
+}
+
 body {
   background-color: hsl(216, 12%, 8%);
 }
@@ -28,6 +33,12 @@ body {
   border-radius: 15px;
   overflow: hidden;
   padding: 30px;
+  margin: auto 20px;
+}
+@media (max-width: 450px) {
+  .card {
+    height: auto;
+  }
 }
 
 .card__image {
@@ -36,9 +47,29 @@ body {
   background-color: hsl(216, 12%, 54%);
   border-radius: 50%;
 }
+@media (max-width: 450px) {
+  .card__image {
+    margin-bottom: 30px;
+  }
+}
 
 .card__text {
   width: 100%;
+}
+.card__text h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 20px;
+}
+.card__text p {
+  font-size: 15px;
+  color: hsl(217, 12%, 63%);
+}
+@media (max-width: 450px) {
+  .card__text {
+    margin-bottom: 30px;
+  }
 }
 
 .card__form {
@@ -57,4 +88,20 @@ body {
   width: 50px;
   height: 50px;
   background-color: hsl(216, 12%, 54%);
+}
+
+.btn {
+  width: 340px;
+  height: 45px;
+  background-color: hsl(25, 97%, 53%);
+  border-radius: 25px;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+@media (max-width: 450px) {
+  .btn {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -23,6 +23,7 @@ $Very-Dark-Blue: hsl(216, 12%, 8%);
 // ## Typography
 // ### Body Copy
 $Font-size-paragraph: 15px;
+$Font-size-title: 24px;
 
 // ### Font
 $Font-Family: "Overpass";
@@ -36,6 +37,11 @@ $padding: 30px;
 $margin: 30px;
 
 // ## main styles
+:root {
+	font-family: $Font-Family;
+	letter-spacing: 1px;
+}
+
 body {
 	background-color: $Very-Dark-Blue;
 }
@@ -67,6 +73,11 @@ body {
 	border-radius: 15px;
 	overflow: hidden;
 	padding: $padding;
+	margin: auto $margin - 10px;
+
+	@media (max-width: 450px) {
+		height: auto;
+	}
 }
 
 .card__image {
@@ -74,10 +85,30 @@ body {
 	height: 50px;
 	background-color: $Medium-Grey;
 	border-radius: 50%;
+
+	@media (max-width: 450px) {
+		margin-bottom: $margin;
+	}
 }
 
 .card__text {
 	width: 100%;
+
+	& h1 {
+		font-size: $Font-size-title;
+		font-weight: $w700;
+		color: $White;
+		margin-bottom: $margin - 10px;
+	}
+
+	& p {
+		font-size: $Font-size-paragraph;
+		color: $Light-Grey;
+	}
+
+	@media (max-width: 450px) {
+		margin-bottom: $margin;
+	}
 }
 
 // ### form styles
@@ -97,7 +128,21 @@ body {
 	width: 50px;
 	height: 50px;
 	background-color: $Medium-Grey;
+	// outline: none;
+	// appearance: none;
 }
 
 .btn {
+	width: 340px;
+	height: 45px;
+	background-color: $Orange;
+	border-radius: 25px;
+	color: $White;
+	text-transform: uppercase;
+	font-weight: $w700;
+	letter-spacing: 2px;
+
+	@media (max-width: 450px) {
+		width: 100%;
+	}
 }
