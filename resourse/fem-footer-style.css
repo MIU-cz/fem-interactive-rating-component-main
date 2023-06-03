@@ -19,8 +19,8 @@
 	color: var(--my-link-color);
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 	.attribution {
 		position: relative;
 	}
-}
+} */

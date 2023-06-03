@@ -9,21 +9,43 @@
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <main class="conteiner flex justify">
+    <div class="card flex">
+      <div class="card__image flex justify">
+        <img src="images/icon-star.svg" alt="icon-star">
+      </div>
+      <div class="card__text">
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
+      </div>
 
+      <!-- ### form -->
+      <form action="#" class="card__form">
+        <div class="card__form_inputs flex">
+          <input type="radio" class="rate_input" name="rate-input" placeholder="1" value="1" id="r-input-1">
+          <input type="radio" class="rate_input" name="rate-input" placeholder="2" value="2" id="r-input-2">
+          <input type="radio" class="rate_input" name="rate-input" placeholder="3" value="3" id="r-input-3">
+          <input type="radio" class="rate_input" name="rate-input" placeholder="4" value="4" id="r-input-4">
+          <input type="radio" class="rate_input" name="rate-input" placeholder="5" value="5" id="r-input-5">
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </main>
   <!-- Rating state start -->
 
-  How did we do?
 
-  Please let us know how we did with your support request. All feedback is appreciated
-  to help us improve our offering!
 
-  1 2 3 4 5
 
-  Submit
+
+
+
+
 
   <!-- Rating state end -->
 
@@ -31,12 +53,14 @@
 
   <!-- Thank you state start -->
 
-  You selected <!-- Add rating here --> out of 5
+  <!-- You selected  -->
+  <!-- Add rating here -->
+  <!-- out of 5 -->
 
-  Thank you!
+  <!-- Thank you!
 
   We appreciate you taking the time to give a rating. If you ever need more support,
-  don't hesitate to get in touch!
+  don't hesitate to get in touch! -->
 
   <!-- Thank you state end -->
 
