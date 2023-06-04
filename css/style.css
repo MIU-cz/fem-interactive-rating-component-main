@@ -29,7 +29,7 @@ body {
   height: 415px;
   flex-wrap: wrap;
   align-content: space-between;
-  background-color: hsl(213, 19%, 18%);
+  background: radial-gradient(farthest-corner at 50% 35%, hsl(213, 19%, 18%), hsl(216, 12%, 8%));
   border-radius: 15px;
   overflow: hidden;
   padding: 30px;
@@ -104,4 +104,8 @@ body {
   .btn {
     width: 100%;
   }
+}
+
+.attribution {
+  color: hsl(217, 12%, 63%);
 }/*# sourceMappingURL=style.css.map */

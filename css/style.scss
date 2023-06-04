@@ -67,8 +67,8 @@ body {
 	flex-wrap: wrap;
 	// justify-content: center;
 	align-content: space-between;
-	background-color: $Dark-Blue;
-	// background: radial-gradient(farthest-corner at 50% 10%, $Medium-Grey, $Dark-Blue);
+	// background-color: $Dark-Blue;
+	background: radial-gradient(farthest-corner at 50% 10%, $Dark-Blue, $Very-Dark-Blue);
 	// mix-blend-mode: multiply;
 	border-radius: 15px;
 	overflow: hidden;
@@ -145,4 +145,9 @@ body {
 	@media (max-width: 450px) {
 		width: 100%;
 	}
+}
+
+// ### attribution
+.attribution {
+	color: $Light-Grey;
 }
