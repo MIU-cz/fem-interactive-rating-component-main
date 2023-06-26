@@ -2,72 +2,91 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Interactive rating component</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="css/style.css">
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <main class="conteiner flex justify">
-    <div class="card flex">
-      <div class="card__image flex justify">
-        <img src="images/icon-star.svg" alt="icon-star">
-      </div>
-      <div class="card__text">
-        <h1>How did we do?</h1>
-        <p>Please let us know how we did with your support request. All feedback is appreciated
-          to help us improve our offering!</p>
-      </div>
+	<main class="conteiner flex justify">
 
-      <!-- ### form -->
-      <form action="#" class="card__form">
-        <div class="card__form_inputs flex">
-          <label for="r-input-1">1</label>
-          <input type="radio" class="rate_input" name="rate-group" placeholder="1" value="1" id="r-input-1">
-          <input type="radio" class="rate_input" name="rate-group" placeholder="2" value="2" id="r-input-2">
-          <input type="radio" class="rate_input" name="rate-group" placeholder="3" value="3" id="r-input-3">
-          <input type="radio" class="rate_input" name="rate-group" placeholder="4" value="4" id="r-input-4">
-          <input type="radio" class="rate_input" name="rate-group" placeholder="5" value="5" id="r-input-5">
-        </div>
-        <button type="submit" class="btn">Submit</button>
-      </form>
-    </div>
-  </main>
-  <!-- Rating state start -->
+		<!-- Rating state start -->
+		<div class="card flex">
+			<div class="card__image flex justify">
+				<img src="images/icon-star.svg" alt="icon-star">
+			</div>
+			<div class="card__text">
+				<h1>How did we do?</h1>
+				<p>Please let us know how we did with your support request. All feedback is appreciated
+					to help us improve our offering!</p>
+			</div>
 
+			<!-- ### form -->
+			<form name="rateForm" action="#" class="rate__form">
+				<div class="rate__form_inputs">
+					<label class="rate__label">
+						<span name="rateLabel">1</span>
+						<input type="radio" class="rate_input" name="rateGroup" value="1" id="rate-input-1">
+					</label>
 
+					<label class="rate__label">
+						<span name="rateLabel">2</span>
+						<input type="radio" class="rate_input" name="rateGroup" value="2" id="rate-input-2">
+					</label>
 
+					<label class="rate__label">
+						<span name="rateLabel">3</span>
+						<input type="radio" class="rate_input" name="rateGroup" value="3" id="rate-input-3">
+					</label>
 
+					<label class="rate__label">
+						<span name="rateLabel">4</span>
+						<input type="radio" class="rate_input" name="rateGroup" value="4" id="rate-input-4">
+					</label>
 
+					<label class="rate__label">
+						<span name="rateLabel">5</span>
+						<input type="radio" class="rate_input" name="rateGroup" value="5" id="rate-input-5">
+					</label>
 
+				</div>
+				<button type="submit" class="btn">Submit</button>
+				<div class="errors hidden"></div>
+			</form>
+		</div>
 
+	</main>
 
+	<!-- Rating state end -->
+	<!-- Thank you state start -->
+	<div class="conteiner__modal conteiner flex justify hidden">
+		<div class="card flex modal__card">
+			<div class="modal__image">
+				<img src="images/illustration-thank-you.svg" alt="icon-star">
+			</div>
+			<div class="modal__result">
+				<span id="modal-result"></span>
+			</div>
+			<div class="card__text modal__text">
+				<h1>Thank you!</h1>
+				<p>We appreciate you taking the time to give a rating. If you ever need more support,
+					don't hesitate to get in touch!</p>
+			</div>
+		</div>
+	</div>
 
-  <!-- Rating state end -->
+	<!-- Thank you state end -->
 
-
-
-  <!-- Thank you state start -->
-
-  <!-- You selected  -->
-  <!-- Add rating here -->
-  <!-- out of 5 -->
-
-  <!-- Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support,
-  don't hesitate to get in touch! -->
-
-  <!-- Thank you state end -->
-
-
-  <footer></footer>
-  <script src="resourse/fem-footer.js"></script>
+	<footer>
+		<div class="autor"></div>
+	</footer>
+	<script src="resourse/fem-footer-script.js"></script>
+	<script src="js/form-script.js"></script>
 </body>
 
 </html>

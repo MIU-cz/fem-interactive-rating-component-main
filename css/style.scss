@@ -36,10 +36,11 @@ $card-Height: 415px;
 $padding: 30px;
 $margin: 30px;
 
+// ===============
 // ## main styles
 :root {
 	font-family: $Font-Family;
-	letter-spacing: 1px;
+	letter-spacing: 0.01em;
 }
 
 body {
@@ -60,6 +61,7 @@ body {
 	align-items: center;
 }
 
+// ===============
 // ### card styles
 .card {
 	width: $card-Width;
@@ -67,10 +69,12 @@ body {
 	flex-wrap: wrap;
 	// justify-content: center;
 	align-content: space-between;
-	// background-color: $Dark-Blue;
+
+	background-color: $Dark-Blue;
 	background: radial-gradient(farthest-corner at 50% 10%, $Dark-Blue, $Very-Dark-Blue);
-	// mix-blend-mode: multiply;
-	border-radius: 15px;
+	mix-blend-mode: exclusion;
+
+	border-radius: 25px;
 	overflow: hidden;
 	padding: $padding;
 	margin: auto $margin - 10px;
@@ -104,6 +108,7 @@ body {
 	& p {
 		font-size: $Font-size-paragraph;
 		color: $Light-Grey;
+		line-height: 1.5em;
 	}
 
 	@media (max-width: 450px) {
@@ -111,25 +116,68 @@ body {
 	}
 }
 
+// ===============
 // ### form styles
-.card__form {
+.rate__form {
 	width: 100%;
 	text-align: center;
 }
 
-.card__form_inputs {
+.rate__form_inputs {
 	width: 100%;
+	display: grid;
+	grid-template: 1fr / repeat(5, 1fr);
+
 	margin-bottom: $margin;
-	justify-content: space-around;
+	justify-items: center;
+}
+
+.rate__label {
+	width: 100%;
+	height: 100%;
+
+	@media (min-width: 375px) {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.rate__label span {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+
+	text-align: center;
+	padding-top: 16px;
+	font-size: $Font-size-title;
+	color: $White;
+
+	opacity: 0.3;
+	background-color: $Light-Grey;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	// &:active {
+	// 	background-color: $Orange;
+	// 	opacity: 1;
+	// }
+
+	&.rate-active {
+		background-color: $Orange;
+		opacity: 1;
+	}
 }
 
 .rate_input {
-	display: block;
-	width: 50px;
-	height: 50px;
-	background-color: $Medium-Grey;
-	// outline: none;
-	// appearance: none;
+	display: none;
+	// &:checked + .rate__label > span {
+	// 	background-color: $Orange;
+	// 	opacity: 1;
+	// }
 }
 
 .btn {
@@ -145,8 +193,62 @@ body {
 	@media (max-width: 450px) {
 		width: 100%;
 	}
+
+	&:hover {
+		background-color: $White;
+		color: $Orange;
+	}
 }
 
+.errors {
+	color: red;
+	font-weight: $w700;
+	margin-top: $margin;
+}
+
+// <!-- Rating state end -- >
+// <!-- Thank you state start -- >
+
+.conteiner__modal {
+	position: absolute;
+	top: 0;
+	background-color: $Very-Dark-Blue;
+	z-index: 1000;
+	transition: all 0.3s;
+}
+
+.hidden {
+	display: none;
+}
+
+.modal__card {
+	justify-content: center;
+	text-align: center;
+	padding: $padding * 2 $padding;
+}
+
+.modal__image {
+}
+
+.modal__result {
+	width: 100%;
+
+	span {
+		// width: 75%;
+		padding: $padding - 25px $padding - 10px;
+		color: $Orange;
+		border-radius: 25px;
+		// background-color: opacify($color: $Light-Grey, $amount: 0.3);
+		background-color: transparentize($color: $Light-Grey, $amount: 0.75);
+	}
+}
+
+.card__text {
+}
+.modal__text {
+}
+
+// #Footer
 // ### attribution
 .attribution {
 	color: $Light-Grey;

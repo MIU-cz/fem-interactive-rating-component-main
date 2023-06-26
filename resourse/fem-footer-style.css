@@ -5,22 +5,81 @@
 }
 
 .attribution {
-	position: fixed;
-	bottom: 0;
 	width: 100%;
+	box-sizing: border-box;
 	font-family: "Permanent Marker", cursive;
 	font-size: 12px;
 	text-align: center;
 	letter-spacing: 1px;
-	padding-bottom: 15px;
+	/* padding-bottom: 15px; */
+	/* margin: 20px 20px 0; */
+	padding: 20px 20px;
+	/* background-color: rgba(0, 0, 0, 0.1); */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* gap: 20px; */
+	align-items: center;
+}
+
+.attribution_description {
+	/* display: inline-block; */
+	width: 100%;
 }
 
 .attribution a {
 	color: var(--my-link-color);
 }
+.attribution a:hover {
+	color: orange;
+}
 
-/* @media (max-width: 768px) {
+.attribution_socials {
+	/* width: 100%; */
+	margin-top: 15px;
+}
+
+.attribution ul {
+	display: grid;
+	/* width: 100%; */
+	grid-template: 1fr / repeat(5, 16px);
+	gap: 10px;
+	padding: 0;
+}
+
+.attribution li {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border: 2px solid var(--my-link-color);
+}
+
+.attribution li:hover {
+	border-color: orange;
+	background-color: var(--my-link-color);
+}
+
+.attribution img {
+	width: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.attribution svg {
+	width: 100%;
+	height: 100%;
+}
+.attribution svg path {
+	fill: var(--my-link-color);
+}
+
+.attribution svg path:hover {
+	fill: orange;
+}
+
+@media (min-width: 768px) {
 	.attribution {
-		position: relative;
+		position: fixed;
+		bottom: 0;
 	}
-} */
+}
