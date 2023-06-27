@@ -114,6 +114,7 @@ body {
 }
 .rate__label span:hover {
   opacity: 1;
+  cursor: pointer;
 }
 .rate__label span.rate-active {
   background-color: hsl(25, 97%, 53%);
@@ -176,8 +177,4 @@ body {
   color: hsl(25, 97%, 53%);
   border-radius: 25px;
   background-color: rgba(149, 158, 172, 0.25);
-}
-
-.attribution {
-  color: hsl(217, 12%, 63%);
 }/*# sourceMappingURL=style.css.map */

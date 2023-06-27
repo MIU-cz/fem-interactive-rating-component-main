@@ -159,6 +159,7 @@ body {
 
 	&:hover {
 		opacity: 1;
+		cursor: pointer;
 	}
 
 	// &:active {
@@ -251,5 +252,10 @@ body {
 // #Footer
 // ### attribution
 .attribution {
-	color: $Light-Grey;
+	// color: $Light-Grey;
+	// background-color: $Light-Grey;
+
+	a {
+		// color: $White;
+	}
 }
